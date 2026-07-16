@@ -393,7 +393,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;margin-top:48px;color:v
         <a href="https://github.com/mapuamap/denys-fast-mskills/blob/main/LICENSE" target="_blank" rel="noopener">Apache-2.0</a>
       </div>
     </div>
-    <div class="fmeta"><span data-i18n="footer_made">Часть экосистемы denys.fast</span> · denys-fast-mskills <span class="num">v2.0.0</span> · © 2026 Denis</div>
+    <div class="fmeta"><span data-i18n="footer_made">Часть экосистемы denys.fast</span> · denys-fast-mskills <span class="num">v3.3.0</span> · © 2026 Denis</div>
   </div>
 </footer>
 
@@ -420,6 +420,12 @@ var DATA=[
   {kind:'skill',cat:'code',icon:'shield-check',cmd:'/m_code_rules_audit',
    en:{tag:'Audit against your rules',desc:'Checks code against the rules in your repo plus safe checks. Report-only; pairs with /code-review.'},
    ru:{tag:'Аудит по твоим правилам',desc:'Проверяет код по правилам твоего репозитория и безопасным проверкам. Только отчёт; в пару к /code-review.'}},
+  {kind:'skill',cat:'plan',icon:'save',cmd:'/m_save',
+   en:{tag:'Save the session',desc:'Snapshots the current work — task, state, next step, key files — into the standing .m_last_task.md handoff file.'},
+   ru:{tag:'Сохранить сессию',desc:'Снимок текущей работы — задача, состояние, следующий шаг, ключевые файлы — в дежурный файл .m_last_task.md.'}},
+  {kind:'skill',cat:'plan',icon:'play',cmd:'/m_go',
+   en:{tag:'Resume the last task',desc:'Reads .m_last_task.md, restores context and continues the work from its recorded next step.'},
+   ru:{tag:'Продолжить последнюю задачу',desc:'Читает .m_last_task.md, восстанавливает контекст и продолжает работу с записанного следующего шага.'}},
   {kind:'command',cat:'infra',icon:'settings-2',cmd:'/m_setup',
    en:{tag:'Install the m_code framework',desc:'Drops rules, hooks and ai-check.sh into the current repo. Once per project.'},
    ru:{tag:'Установить m_code-фреймворк',desc:'Кладёт правила, хуки и ai-check.sh в репозиторий. Один раз на проект.'}},

@@ -1,6 +1,6 @@
 {
   "name": "denys-fast-mskills",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Denis's m_* toolkit for Claude Code: plan -> execute -> verify (m_plan), deploy/infra context commands, Playwright full-test loop, the m_code code-quality framework (rules, hooks, agents, verification), and an end-of-work «Что сделал»/«Что дальше»/«Задача» summary (Stop hook, fires once when all work is done).",
   "author": {
     "name": "Denis",

@@ -52,6 +52,8 @@ Installed globally with the plugin. `m_plan` / `m_plan_implement` can be invoked
 | **m_code_init_project** | Bootstrap / harden a project for AI-assisted development (CLAUDE.md, rules, seams, first tests). |
 | **m_code_refactor** | Safe refactoring / restructuring in small verified slices. Modes: `preserve` (behavior-preserving legacy work) or `may-change` (architecture improvement). |
 | **m_code_rules_audit** | Audit code against the project's own rules and checks (complements `/code-review`). |
+| **m_save** | Snapshot the current work into the standing `.m_last_task.md` handoff file (task, state, next step, key files, decisions) so a fresh session can resume it. |
+| **m_go** | Read `.m_last_task.md`, restore context, and continue the work from its recorded next step. |
 
 ### Commands
 
@@ -104,7 +106,7 @@ The three `m_code_*` skills and three agents are global (they come with the plug
 denys-fast-mskills/
 ├── .claude-plugin/        plugin.json + marketplace.json
 ├── hooks/                 Stop hook: end-of-turn «Что дальше»/«Задача» summary
-├── skills/                6 skills (m_plan, m_plan_implement, m_plan_roll, 3x m_code)
+├── skills/                8 skills (m_plan, m_plan_implement, m_plan_roll, 3x m_code, m_save, m_go)
 ├── commands/              8 commands
 ├── agents/                3 agents (3x m_code)
 └── m_code_framework/      payload /m_setup installs into a target project

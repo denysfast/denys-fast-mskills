@@ -10,7 +10,7 @@ You are working on **denys-fast-mskills**, a public Claude Code **plugin** that 
 
 | Kind | Items |
 |------|-------|
-| **Skills** (`skills/`) | `m_plan`, `m_plan_implement`, `m_plan_roll`, `m_code_init_project`, `m_code_refactor`, `m_code_rules_audit` |
+| **Skills** (`skills/`) | `m_plan`, `m_plan_implement`, `m_plan_roll`, `m_code_init_project`, `m_code_refactor`, `m_code_rules_audit`, `m_save`, `m_go` |
 | **Commands** (`commands/`) | `m_setup`, `m_infr_init`, `m_infr`, `m_deploy_init`, `m_deploy_check`, `m_deploy`, `m_playwright_fulltest`, `m_explain` |
 | **Agents** (`agents/`) | `m_code_architecture_reviewer`, `m_code_context_scout`, `m_code_test_runner` |
 | **Hooks** (`hooks/`) | `hooks.json` (Stop) → one hook: `turn_summary.py` — ends each substantive turn (≥ `CLAUDE_SUMMARY_MIN_TOOLS`, default 2, tool calls) with two plain-text blocks «Что дальше» + «Задача». NO widget, NO stats line, NO `.m_verify` ledger. Plugin-native, fail-open. (Per-repo enforcement hooks still come separately from the `m_code_framework/` payload via `/m_setup`.) |
