@@ -1,0 +1,13 @@
+name: Local CI policy
+on:
+  push:
+    branches: [main]
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
+jobs:
+  policy:
+    # Public repository: never run code from external fork PRs on the private runner network.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    uses: denysfast/ci-workflows/.github/workflows/ci-policy.yml@main
